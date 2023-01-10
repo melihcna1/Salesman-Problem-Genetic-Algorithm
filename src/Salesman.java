@@ -224,7 +224,9 @@ class GA {
             int randomId = (int) (Math.random() * pop.populationSize());
             tournament.saveTour(i, pop.getTour(randomId));
         }
-        Tour fittest = tournament.getFittest();
+        Tour fittest = tournament.getFittest()
+
+                ;
         return fittest;
     }
 }
