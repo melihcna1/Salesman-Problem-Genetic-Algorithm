@@ -14,6 +14,10 @@ class City {
         double distance = Math.sqrt((xDistance*xDistance) + (yDistance*yDistance));
         return distance;
     }
+    //overriding the toString method
+    public String toString() {
+        return "City: (" + x + ", " + y + ")";
+    }
 }
 
 class Tour {
@@ -219,6 +223,7 @@ class GA {
         }
     }
     private static Tour selection(Population pop) {
+        int tournamentSize=5;
         Population tournament = new Population(tournamentSize);
         for (int i = 0; i < tournamentSize; i++) {
             int randomId = (int) (Math.random() * pop.populationSize());
